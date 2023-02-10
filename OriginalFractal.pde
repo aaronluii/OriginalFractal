@@ -18,7 +18,14 @@ public void OriginalFractal(int x, int y, int size) {
     }
     
   if (size > 8) {
-  OriginalFractal(x - size/2, y, size/2);
-  OriginalFractal(x + size/2, y, size/2);
+  ellipse(x-size/4, y, size/2, size/2);
+    ellipse(x-size*(float)Math.sqrt(2)/8, y-size*(float)Math.sqrt(2)/8, size/2, size/2);
+    ellipse(x, y-size/4, size/2, size/2);
+    ellipse(x+size*(float)Math.sqrt(2)/8, y-size*(float)Math.sqrt(2)/8, size/2, size/2);
+    ellipse(x+size/4, y, size/2, size/2);
+    ellipse(x+size*(float)Math.sqrt(2)/8, y+size*(float)Math.sqrt(2)/8, size/2, size/2);
+    ellipse(x, y+size/4, size/2, size/2);
+    ellipse(x-size*(float)Math.sqrt(2)/8, y+size*(float)Math.sqrt(2)/8, size/2, size/2);
+    OriginalFractal(x, y, size/2);
    }
 }
